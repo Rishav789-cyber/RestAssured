@@ -48,4 +48,8 @@ public Object[][] deleteData(){
 	public static void delete(String id) {
 		TC_API.deleteAuthor(id);
 	}
+	@Test(priority=6)
+	public static void verifyJSONSchema() {
+		TC_API.jsonSchema("1");
+	}
 }
