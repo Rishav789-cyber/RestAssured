@@ -91,5 +91,12 @@ public static void deleteAuthor(String id) {
 	.then()
 	.statusCode(200);
 }
+	public static void jsonSchema(String id) {
+	given()
+	.when()
+	.get("/Authors/"+id)
+	.then().assertThat()
+	.body(JsonSchemaValidator.matchesJsonSchemaInClasspath("JSONSchema/json.json"));
+}
 }
 
