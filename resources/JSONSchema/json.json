@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome",
+    "definitions": {
+        "Welcome": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "idBook": {
+                    "type": "integer"
+                },
+                "firstName": {
+                    "type": "string",
+                    "minLength":4,
+                    "maxLength": 20
+                },
+                "lastName": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "firstName",
+                "id",
+                "idBook",
+                "lastName"
+            ],
+            "title": "Welcome"
+        }
+    }
+}
